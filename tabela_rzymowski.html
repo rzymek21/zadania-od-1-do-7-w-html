@@ -6,7 +6,7 @@
      <title>  tabela_rzymowski     </title> 
      </head> 
  <body> 
- tutaj będzie tabela <br>
+ <font size="7"> tutaj będzie tabela <br>
 <A HREF="index.html"> Wróć </A> <br> 
 
 <!DOCTYPE html> 
@@ -17,60 +17,137 @@
 </head> 
 <body> 
 <table border=2> 
-   <caption>Tytuł tabela HTML</caption> 
-   <thead> 
-       <tr> 
-         <p> <th colspan="5">Dane Procesorów - Michał Rzymowski 2F G2</th> </p>
-      </tr>
-      <tr> 
-         <th>Model procesora</th> 
-         <th>Taktowanie</th> 
-         <th>Liczba rdzeni</th> 
-         <th>TDP</th> 
-         <th>Liczba Cache</th> 
-         </tr>
-   </thead> 
-   <tbody> 
-      <tr> 
-         <td>Intel Core 2 Duo</td> 
-         <td>2,66 GHz</td> 
-         <td>2</td> 
-         <td>65 W</td> 
-         <td>6 MB</td> 
-      </tr> 
-      <tr> 
-         <td>Intel Core i3- 2100 Sr05C</td> 
-         <td>3,1 GHz</td> 
-         <td>2</td> 
-         <td>65 W</td> 
-         <td>12 MB</td> 
-      </tr> 
-      <tr> 
-         <td>Intel Core i5- 12400F</td> 
-         <td>2,5 GHz</td> 
-         <td>6</td> 
-         <td>65 W</td> 
-         <td>18 MB</td> 
-      </tr>
-      <tr>
-         <td>Intel Core i7- 14700K</td> 
-         <td>3,4 GHz </td> 
-         <td>20</td> 
-         <td>125 W</td> 
-         <td>33 MB</td> 
-      </tr> 
-      <tr>
-         <td>Intel Core i9- 16990HK</td> 
-         <td>7,8 GHz</td> 
-         <td>24</td> 
-         <td>125 W</td> 
-         <td>64 MB</td> 
-      </tr>
-      <tr> 
-        <br> <p>  <th colspan="5">Dane Procesorów </th> </p> </br>
-      </tr>
+  
 
-   </tbody> 
-</table> 
-</body> 
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Dane Procesorów - Michał Rzymowski 2F G2</title>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 4px solid #00FF90;
+        }
+
+        caption {
+            background-color: #072443;
+            color: white;
+            font-size: 32px;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        th {
+            background-color: #4A90E2;
+            border: 3px solid #00CC66;
+            padding: 10px;
+            font-size: 22px;
+        }
+
+        td {
+            border: 3px solid #00CC66;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Kolory wierszy (tła) */
+        .row1  { background-color: #B7FFA0; }
+        .row2  { background-color: #A0FF8C; }
+        .row3  { background-color: #79E35F; }
+        .row4  { background-color: #4E9F2E; }
+        .row5  { background-color: #2B7A1A; }
+
+        /* Kolory tekstu */
+        .blueText { color: #00A6FF; }
+        .redText  { color: #FF2A00; }
+        .yellowText { color: #FFCC00; }
+        .greenText { color: #008800; }
+        .orangeText { color: #FF6600; }
+
+        /* Dolny pasek */
+        .footerRow {
+            background-color: #8A1CC6;
+            color: black;
+            font-size: 22px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<table>
+    <caption>Dane Procesorów - Michał Rzymowski 2F G2</caption>
+
+    <thead>
+        <tr>
+            <th>Model procesora</th>
+            <th>Taktowanie</th>
+            <th>Liczba rdzeni</th>
+            <th>TDP</th>
+            <th>Pamięć Cache</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr class="row1">
+            <td class="blueText">Intel Core 2 Duo</td>
+            <td class="orangeText">2,66 GHz</td>
+            <td class="redText">2</td>
+            <td class="orangeText">65 W</td>
+            <td class="greenText">6 MB</td>
+        </tr>
+
+        <tr class="row2">
+            <td class="blueText">Intel Core i3- 2100 Sr05C</td>
+            <td class="greenText">3,1 GHz</td>
+            <td class="blueText">2</td>
+            <td class="blueText">65 W</td>
+            <td class="blueText">12 MB</td>
+        </tr>
+
+        <tr class="row3">
+            <td class="blueText">Intel Core i5- 12400F</td>
+            <td class="greenText">2,5 GHz</td>
+            <td class="greenText">6</td>
+            <td class="greenText">65 W</td>
+            <td>18 MB</td>
+        </tr>
+
+        <tr class="row4">
+            <td class="blueText">Intel Core i7- 14700K</td>
+            <td class="redText">3,4 GHz</td>
+            <td class="redText">20</td>
+            <td class="redText">125 W</td>
+            <td class="redText">33 MB</td>
+        </tr>
+
+        <tr class="row5">
+            <td class="blueText">Intel Core i9- 16990HK</td>
+            <td class="yellowText">7,8 GHz</td>
+            <td class="yellowText">24</td>
+            <td class="yellowText">125 W</td>
+            <td>64 MB</td>
+        </tr>
+
+        <tr>
+            <th colspan="5" class="footerRow">Dane Procesorów</th>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</body>
 </html>
