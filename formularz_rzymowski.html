@@ -7,6 +7,118 @@
      </head> 
  <body> 
  tutaj będzie formularz <br>
-<A HREF="index.html"> link do formularza </A>  
- </body> 
+<A HREF="index.html"> link do formularza </A> 
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Formularz rezerwacji hotelu</title>
+<style>
+:root{--paper:#ffffff;--ink:#222}
+body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#fff3b0; padding:24px; color:var(--ink)}
+.paper{max-width:1000px;margin:16px auto;padding:28px;background:var(--paper);box-shadow:0 6px 18px rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.06)}
+h1{font-size:20px;text-align:center;margin:0 0 18px;letter-spacing:2px}
+form{display:flex;gap:24px}
+.col{flex:1;min-width:280px}
+label{display:block;font-size:13px;margin:10px 0 6px}
+input[type=text], input[type=email], input[type=tel], input[type=date], input[type=time], select, textarea{
+width:100%;box-sizing:border-box;padding:8px 10px;border:2px solid #cfcfcf;border-radius:4px;font-size:14px}
+.small{width:120px;display:inline-block}
+.row{display:flex;gap:12px}
+.inline{display:inline-block}
+.fieldset{border:0;margin:6px 0 18px;padding:0}
+.payment{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.payment label{margin:0}
+textarea{height:140px;resize:vertical}
+.submit-wrap{text-align:center;margin-top:14px}
+button{padding:10px 20px;border:2px solid var(--ink);background:transparent;border-radius:4px;cursor:pointer}
+/* small handwriting-like accents */
+.title-hand{font-family: 'Courier New', Courier, monospace; font-weight:700;}
+@media(max-width:760px){form{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="paper">
+<h1 class="title-hand">FORMULARZ REZERWACJI HOTELU</h1>
+
+
+<form action="#" method="post">
+<div class="col">
+<label for="imie">Imię i nazwisko</label>
+<div class="row">
+<input id="imie" name="imie" type="text" placeholder="Imię" />
+<input id="nazwisko" name="nazwisko" type="text" placeholder="Nazwisko" />
+</div>
+
+
+<fieldset class="fieldset">
+<label>Adres</label>
+<input id="ulica" name="ulica" type="text" placeholder="Ulica" style="width:65%;display:inline-block" />
+<input id="nr_dom" name="nr_dom" type="text" placeholder="Nr domu" class="small" />
+
+
+<div class="row" style="margin-top:8px">
+<input id="miasto" name="miasto" type="text" placeholder="Miasto" />
+<input id="woj" name="woj" type="text" placeholder="Województwo" />
+</div>
+
+
+<label for="kod">Kod pocztowy</label>
+<input id="kod" name="kod" type="text" placeholder="00-000" style="width:45%" />
+</fieldset>
+
+
+<label for="telefon">Nr telefonu</label>
+<input id="telefon" name="telefon" type="tel" placeholder="+48 600 000 000" />
+
+
+<label for="email">E-mail</label>
+<input id="email" name="email" type="email" placeholder="adres@example.com" />
+
+
+</div>
+
+
+<div class="col">
+<label for="przyjazd">Data i godzina przyjazdu</label>
+<div class="row">
+<input id="data_przyjazd" name="data_przyjazd" type="date" />
+<input id="godz_przyjazd" name="godz_przyjazd" type="time" class="small" />
+</div>
+
+
+<label for="wyjazd">Data i godzina wyjazdu</label>
+<div class="row">
+<input id="data_wyjazd" name="data_wyjazd" type="date" />
+<input id="godz_wyjazd" name="godz_wyjazd" type="time" class="small" />
+</div>
+
+
+<label for="dorosli">Liczba dorosłych</label>
+<input id="dorosli" name="dorosli" type="text" placeholder="np. 2" />
+
+
+<label for="dzieci">Liczba dzieci</label>
+<input id="dzieci" name="dzieci" type="text" placeholder="np. 1" />
+
+
+<label>Metoda płatności</label>
+<div class="payment">
+<label><input type="checkbox" name="platnosc" value="blik" /> BLIK</label>
+<label><input type="checkbox" name="platnosc" value="przelew" /> Przelew</label>
+<label><input type="checkbox" name="platnosc" value="karta" /> Karta kredytowa</label>
+<label><input type="checkbox" name="platnosc" value="paypal" /> PayPal</label>
+<label><input type="checkbox" name="platnosc" value="gotowka" /> Gotówka</label>
+</div>
+
+
+<label for="uwagi">Czy masz jakieś specjalne życzenia?</label>
+<textarea id="uwagi" name="uwagi" placeholder="Np. bezpłatne łóżeczko dla dziecka, pokój dla niepalących..."></textarea>
+
+
+<div class="submit-wrap">
+<button type="submit">PRZEŚLIJ</button>
+</div>
+</div>
+</form>
+</div>
+</body>
 </html>
